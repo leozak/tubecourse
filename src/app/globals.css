@@ -11,5 +11,9 @@
 
 html,
 body {
-  @apply bg-background text-text w-screen h-screen;
+  @apply h-screen w-screen bg-background text-text underline-offset-4;
+}
+
+a {
+  @apply underline-offset-8 transition-opacity active:opacity-50;
 }
