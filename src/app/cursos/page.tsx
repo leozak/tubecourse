@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Section } from "../section/Section";
 
 export const metadata: Metadata = {
   title: "TubeCourse - Cursos",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 export default function PageCursos() {
   return (
     <main>
-      <div>Cursos</div>
+      <Section title="Todos os cursos" variant="grid" />
     </main>
   );
 }

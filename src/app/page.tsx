@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 
-import { Card } from "@/components/card/Card";
 import { Section } from "./section/Section";
 
 export const metadata: Metadata = {
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 export default function PageHome() {
   return (
     <main>
-      <Section />
+      <Section title="Veja mais cursos" variant="h-list" />
     </main>
   );
 }
