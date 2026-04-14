@@ -47,7 +47,7 @@ const items = [
 export default function PageHome() {
   return (
     <main className="flex justify-center mt-8">
-      <div className="min-[880px]:max-w-220">
+      <div className="max-w-full min-[880px]:max-w-220">
         <Section title="Veja mais cursos" variant="h-list" items={items} />
       </div>
     </main>
