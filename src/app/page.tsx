@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+import { Card } from "@/components/card/Card";
+
 export const metadata: Metadata = {
   title: "TubeCourse - Página Inicial",
 };
@@ -7,7 +9,7 @@ export const metadata: Metadata = {
 export default function PageHome() {
   return (
     <main>
-      <div>Home</div>
+      <Card />
     </main>
   );
 }
