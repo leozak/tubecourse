@@ -21,7 +21,7 @@ export default async function PageCourseDetail({ params }: Props) {
 
   return (
     <main className="mt-8 flex justify-center">
-      <div className="w-full min-[880px]:max-w-220">
+      <div className="w-full min-[880px]:max-w-220 mx-4">
         <CourseHeader />
       </div>
     </main>
