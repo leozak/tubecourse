@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const items = [
   {
-    href: "/cursos/asdadsa",
+    href: "/cursos/123",
     title: "Curso de API Rest, Node e Typescript",
     image: "https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg",
     description:
