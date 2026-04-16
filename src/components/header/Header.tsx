@@ -6,9 +6,14 @@ import { useEffect, useState } from "react";
 import { MdMenu, MdOpenInNew } from "react-icons/md";
 
 export const Header = () => {
+  const [title, setTitle] = useState<string>("TubeCourse");
   const [isOpen, setIsOpen] = useState(false);
 
   const currentPath = usePathname();
+
+  useEffect(() => {
+    setTitle(document.title);
+  }, [currentPath]);
 
   useEffect(() => {
     const handle = (e: KeyboardEvent) => {
@@ -26,7 +31,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="bg-primary fixed top-0 left-0 right-0">
+      <header className="z-50 bg-primary fixed top-0 left-0 right-0">
         <nav className="flex items-center gap-4 justify-start px-4 py-2 sm:px-3 sm:justify-center">
           <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
             <MdMenu size={28} />
@@ -124,8 +129,9 @@ export const Header = () => {
           </div>
 
           <h1 className="sm:hidden font-bold line-clamp-1 w-full">
-            {currentPath === "/" && "Página inicial"}
-            {currentPath === "/cursos" && "Todos os cursos"}
+            {/* {currentPath === "/" && "Página inicial"}
+            {currentPath === "/cursos" && "Todos os cursos"} */}
+            {title}
           </h1>
         </nav>
       </header>

@@ -27,7 +27,14 @@ export default async function PageCourseDetail({ params }: Props) {
           idCourse={"123"}
           idClass={"1"}
           image={"https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg"}
+          title={"Curso de API Rest, Node e Typescript"}
         />
+        <CourseHeader />
+        <CourseHeader />
+        <CourseHeader />
+        <CourseHeader />
+        <CourseHeader />
+        <CourseHeader />
         <CourseHeader />
       </div>
     </main>
