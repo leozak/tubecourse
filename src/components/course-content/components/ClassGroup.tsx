@@ -5,7 +5,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { Class } from "./Class";
 import { useState } from "react";
 
-interface IClassGroupProps {
+export interface IClassGroupProps {
   title: string;
   courseId: string;
   classes: {
@@ -16,6 +16,7 @@ interface IClassGroupProps {
 
 export const ClassGroup = ({ title, classes, courseId }: IClassGroupProps) => {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <button

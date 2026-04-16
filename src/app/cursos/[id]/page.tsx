@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { CourseHeader } from "@/components/course-header/CourseHeader";
 import { StartCourse } from "@/components/StartCouse";
-import { ClassGroup } from "@/components/course-content/components/ClassGroup";
+import { CourseContent } from "@/components/course-content/CourseContent";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -18,9 +18,7 @@ interface Props {
   };
 }
 
-export default async function PageCourseDetail({ params }: Props) {
-  const { id } = await params;
-
+export default async function PageCourseDetail() {
   return (
     <main className="mt-8 flex justify-center">
       <div className="flex w-full flex-col gap-4 px-2 min-[880px]:max-w-220 md:flex-row-reverse lg:px-0">
@@ -32,15 +30,28 @@ export default async function PageCourseDetail({ params }: Props) {
             title={"Curso de API Rest, Node e Typescript"}
           />
         </div>
-        <div className="flex-2 flex flex-col gap-4">
+        <div className="flex-2 flex flex-col gap-8">
           <CourseHeader />
-          <ClassGroup
-            title="Introdução e apresentação do projeto"
-            courseId="123"
-            classes={[
-              { id: "1", title: "Aula 1 - Apresentação do curso" },
-              { id: "2", title: "Aula 2 - Apresentação do projeto" },
-              { id: "3", title: "Aula 3 - Apresentação do projeto" },
+          <CourseContent
+            classGroups={[
+              {
+                title: "Introdução e apresentação do projeto",
+                courseId: "123",
+                classes: [
+                  { id: "1", title: "Aula 1 - Apresentação do curso" },
+                  { id: "2", title: "Aula 2 - Apresentação do projeto" },
+                  { id: "3", title: "Aula 3 - Apresentação do projeto" },
+                ],
+              },
+              {
+                title: "Primeiras configurações do projeto",
+                courseId: "123",
+                classes: [
+                  { id: "1", title: "Aula 1 - Apresentação do curso" },
+                  { id: "2", title: "Aula 2 - Apresentação do projeto" },
+                  { id: "3", title: "Aula 3 - Apresentação do projeto" },
+                ],
+              },
             ]}
           />
         </div>
