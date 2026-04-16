@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { CourseHeader } from "@/components/course-header/CourseHeader";
 import { StartCourse } from "@/components/StartCouse";
-import { Class } from "@/components/course-content/components/Class";
+import { ClassGroup } from "@/components/course-content/components/ClassGroup";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -32,11 +32,16 @@ export default async function PageCourseDetail({ params }: Props) {
             title={"Curso de API Rest, Node e Typescript"}
           />
         </div>
-        <div className="flex-2">
+        <div className="flex-2 flex flex-col gap-4">
           <CourseHeader />
-          <Class
-            title="Curso de API Rest, Node e Typescript #01 - Introdução"
-            playerUrl="/player/{courseId}/{classId}"
+          <ClassGroup
+            title="Introdução e apresentação do projeto"
+            courseId="123"
+            classes={[
+              { id: "1", title: "Aula 1 - Apresentação do curso" },
+              { id: "2", title: "Aula 2 - Apresentação do projeto" },
+              { id: "3", title: "Aula 3 - Apresentação do projeto" },
+            ]}
           />
         </div>
       </div>
