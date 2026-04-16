@@ -30,8 +30,12 @@ export default async function PageCourseDetail() {
             title={"Curso de API Rest, Node e Typescript"}
           />
         </div>
-        <div className="flex-2 flex flex-col gap-8">
-          <CourseHeader />
+        <div className="flex-2 flex flex-col gap-8 pb-12">
+          <CourseHeader
+            title="Curso de API Rest, Node e Typescript"
+            description="No CollapsibleTextrocesso de desenvolvimento, as vezes precisamos criar componentes e outros recursos que nos farão performar muito melhor no futuro. A criação de bons componentes de interface é o segredo para um desenvolvimento rápido de uma aplicação frontend. Nessa vamos criar junto o componente de card da"
+            totalClasses={48}
+          />
           <CourseContent
             classGroups={[
               {
