@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import { CourseHeader } from "@/components/couse-header/CourseHeader";
+import { StartCourse } from "@/components/StartCouse";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -21,7 +22,12 @@ export default async function PageCourseDetail({ params }: Props) {
 
   return (
     <main className="mt-8 flex justify-center">
-      <div className="w-full min-[880px]:max-w-220 mx-4">
+      <div className="flex w-full flex-col gap-4 px-2 min-[880px]:max-w-220">
+        <StartCourse
+          idCourse={"123"}
+          idClass={"1"}
+          image={"https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg"}
+        />
         <CourseHeader />
       </div>
     </main>
