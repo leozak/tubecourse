@@ -20,7 +20,10 @@ export const StartCourse = ({
   const [ref, inView] = useInView({ threshold: 0.2, initialInView: true });
   return (
     <>
-      <div ref={ref} className="flex flex-col gap-4 rounded-md bg-paper p-3">
+      <div
+        ref={ref}
+        className="flex flex-col gap-4 rounded-md bg-paper p-3 md:sticky md:top-22"
+      >
         <Link
           href={`/player/${idCourse}/${idClass}`}
           className="w-full bg-cover bg-no-repeat aspect-video bg-center rounded-2xl"
@@ -34,17 +37,17 @@ export const StartCourse = ({
         </Link>
         <Link
           href={`/player/${idCourse}/${idClass}`}
-          className="bg-primary p-2 px-3 rounded text-center"
+          className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
         >
           Começar curso
         </Link>
       </div>
       {!inView && (
-        <div className="bg-paper p-3 px-2 flex flex-col gap-3 absolute left-0 right-0 top-11">
+        <div className="bg-paper p-3 px-2 flex flex-col gap-3 absolute left-0 right-0 top-11 sm:top-14">
           <h1 className="font-extrabold text-xl">{title}</h1>
           <Link
             href={`/player/${idCourse}/${idClass}`}
-            className="bg-primary p-2 px-3 rounded text-center"
+            className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
           >
             Começar curso
           </Link>
