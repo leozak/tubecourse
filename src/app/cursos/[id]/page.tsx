@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 
-import { CourseHeader } from "@/components/couse-header/CourseHeader";
+import { CourseHeader } from "@/components/course-header/CourseHeader";
 import { StartCourse } from "@/components/StartCouse";
+import { Class } from "@/components/course-content/components/Class";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -33,12 +34,10 @@ export default async function PageCourseDetail({ params }: Props) {
         </div>
         <div className="flex-2">
           <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
-          <CourseHeader />
+          <Class
+            title="Curso de API Rest, Node e Typescript #01 - Introdução"
+            playerUrl="/player/{courseId}/{classId}"
+          />
         </div>
       </div>
     </main>
